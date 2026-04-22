@@ -1,13 +1,12 @@
-import sqlite3
-from werkzeug.security import generate_password_hash, check_password_hash
+from flask import Flask, render_template, request
+import db
 
-def GetDB():
-    db = sqlite3.connect(".database/driveease.db")
-    db.row_factory = sqlite3.Row
-    return db
+app = Flask(__name__)
+app.secret_key = "driveease"
 
-def GetAllSessions():
-    db = GetDB()
-    sessions = db.execute("SELECT * FROM Sessions").fetchall()
-    db.close()
-    return sessions
+@app.route("/")
+def Home():
+    sessionData = db.GetAllSessions()
+    return render_template("index.html", sessions=sessionData)
+
+app.run(debug=True, port=5000)
