@@ -1,0 +1,11 @@
+-- CREATE TABLE Sessions (id INTEGER PRIMARY KEY AUTOINCREMENT,
+--     user_id INTEGER,
+--     date TEXT NOT NULL,
+--     duration TEXT NOT NULL,
+--     distance REAL NOT NULL,
+--     supervisor TEXT NOT NULL,
+--     time_of_day TEXT NOT NULL);
+
+-- CREATE TABLE Users (id INTEGER PRIMARY KEY AUTOINCREMENT,
+--     username TEXT UNIQUE NOT NULL,
+--     password NOT NULL);
