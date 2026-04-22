@@ -11,3 +11,11 @@ def GetAllSessions():
     sessions = db.execute("SELECT * FROM Sessions").fetchall()
     db.close()
     return sessions
+
+def CheckLogin(username, password):
+    db = GetDB()
+    user = db.execute("SELECT * FROM Users WHERE username=?", (username,)).fetchone()
+    if user is not None:
+        if check_password_hash(user['password'], password):
+            return user
+    return None

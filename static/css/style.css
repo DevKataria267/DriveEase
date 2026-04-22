@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;700&display=swap");
 
 * {
     padding: 0;
@@ -7,8 +7,8 @@
 }
 
 body {
-    background: #f5f5f5;
-    font-family: "Nunito", sans-serif;
+    background: #fdfdfd;
+    font-family: "Cormorant Infant", sans-serif;
     font-size: 1rem;
 }
 
@@ -20,17 +20,16 @@ main {
 }
 
 .banner {
-    padding: 40px;
+    padding: 60px;
     text-align: center;
-    background: #111111;
+    background: #1abc9c;
     color: white;
-    font-size: 2.5em;
-    letter-spacing: 2px;
+    font-size: 3em;
 }
 
 nav {
     overflow: hidden;
-    background-color: #222222;
+    background-color: #333;
     text-align: center;
 }
 
@@ -43,33 +42,38 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #444;
+    background-color: #ddd;
+    color: black;
+}
+
+nav a.active {
+    background-color: #04AA6D;
     color: white;
 }
 
 .container {
-    margin: 1rem 0;
 }
 
-.sessions_table {
-    font-family: Arial, Helvetica, sans-serif;
+.guess_table {
+    font-family: "Cormorant Infant", sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
 
-.sessions_table td, .sessions_table th {
+.guess_table td, .guess_table th {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-.sessions_table tr:nth-child(even) { background-color: #f2f2f2; }
-.sessions_table tr:hover { background-color: #ddd; }
+.guess_table tr:nth-child(even) {background-color: #f2f2f2;}
 
-.sessions_table th {
+.guess_table tr:hover {background-color: #ddd;}
+
+.guess_table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #111111;
+    background-color: #1abc9c;
     color: white;
 }
 
@@ -86,7 +90,7 @@ input[type="number"], select {
 
 input[type=submit] {
     width: 100%;
-    background-color: #111111;
+    background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -97,11 +101,11 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #333;
+    background-color: #45a049;
 }
 
 button {
-    background-color: #111111;
+    background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -109,10 +113,4 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 1.05em;
-}
-
-@media (max-width: 600px) {
-    .banner { font-size: 1.5em; padding: 20px; }
-    .sessions_table { font-size: 0.85em; }
-    main { padding: 0.5rem; }
 }
