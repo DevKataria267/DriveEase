@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <p>Welcome to DriveEase. Track your driving sessions and progress towards your licence.</p>
+</div>
+
+<br>
+
+<table class="guess_table">
+    <thead>
+        <th>Date</th>
+        <th>User</th>
+        <th>Duration</th>
+        <th>Distance (km)</th>
+        <th>Supervisor</th>
+        <th>Time of Day</th>
+    </thead>
+    <tbody>
+        {% for session in sessions %}
+        <tr>
+            <td>{{ session['date'] }}</td>
+            <td>{{ session['username'] }}</td>
+            <td>{{ session['duration'] }}</td>
+            <td>{{ session['distance'] }}</td>
+            <td>{{ session['supervisor'] }}</td>
+            <td>{{ session['time_of_day'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}git add .
+git commit -m "add index.html template"
+git push
