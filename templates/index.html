@@ -4,6 +4,12 @@
 
 <div class="container">
     <p>Welcome to DriveEase. Track your driving sessions and progress towards your licence.</p>
+
+    {% if session.get('username') %}
+    <br>
+    <p>Hello {{ session['username'] }}</p>
+    <a href="/add"><button>Add session</button></a>
+    {% endif %}
 </div>
 
 <br>
@@ -31,6 +37,4 @@
     </tbody>
 </table>
 
-{% endblock %}git add .
-git commit -m "add index.html template"
-git push
+{% endblock %}
