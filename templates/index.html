@@ -17,21 +17,26 @@
 <table class="guess_table">
     <thead>
         <th>Date</th>
-        <th>User</th>
         <th>Duration</th>
         <th>Distance (km)</th>
         <th>Supervisor</th>
         <th>Time of Day</th>
+        <th>Actions</th>
     </thead>
     <tbody>
-        {% for session in sessions %}
+        {% for s in sessions %}
         <tr>
-            <td>{{ session['date'] }}</td>
-            <td>{{ session['username'] }}</td>
-            <td>{{ session['duration'] }}</td>
-            <td>{{ session['distance'] }}</td>
-            <td>{{ session['supervisor'] }}</td>
-            <td>{{ session['time_of_day'] }}</td>
+            <td>{{ s['date'] }}</td>
+            <td>{{ s['duration'] }}</td>
+            <td>{{ s['distance'] }}</td>
+            <td>{{ s['supervisor'] }}</td>
+            <td>{{ s['time_of_day'] }}</td>
+            <td>
+                <a href="/edit/{{ s['id'] }}"><button>Edit</button></a>
+                <form action="/delete/{{ s['id'] }}" method="post" style="display:inline;">
+                    <button type="submit" onclick="return confirm('Are you sure?')">Delete</button>
+                </form>
+            </td>
         </tr>
         {% endfor %}
     </tbody>

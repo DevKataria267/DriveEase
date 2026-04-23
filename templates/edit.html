@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Edit session</h2>
+
+<form action="/edit/{{ session['id'] }}" method="post">
+    <label>Date: </label>
+    <input type="date" name="date" id="date" value="{{ session['date'] }}">
+    <label>Duration: </label>
+    <input type="text" name="duration" id="duration" value="{{ session['duration'] }}">
+    <label>Distance (km): </label>
+    <input type="number" name="distance" id="distance" value="{{ session['distance'] }}">
+    <label>Supervisor: </label>
+    <input type="text" name="supervisor" id="supervisor" value="{{ session['supervisor'] }}">
+    <label>Time of Day: </label>
+    <select name="time_of_day" id="time_of_day">
+        <option value="Day" {% if session['time_of_day'] == 'Day' %}selected{% endif %}>Day</option>
+        <option value="Night" {% if session['time_of_day'] == 'Night' %}selected{% endif %}>Night</option>
+        <option value="Dusk/Dawn" {% if session['time_of_day'] == 'Dusk/Dawn' %}selected{% endif %}>Dusk/Dawn</option>
+    </select>
+    <input type="submit" value="Save changes">
+</form>
+
+{% endblock %}
