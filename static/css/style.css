@@ -74,23 +74,23 @@ h2 {
     color: #111;
 }
 
-.guess_table {
+.session_table {
     font-family: "Barlow", sans-serif;
     border-collapse: collapse;
     width: 100%;
     font-size: 0.95em;
 }
 
-.guess_table td, .guess_table th {
+.session_table td, .session_table th {
     border: 1px solid #ddd;
     padding: 10px 14px;
 }
 
-.guess_table tr:nth-child(even) { background-color: #ebebeb; }
+.session_table tr:nth-child(even) { background-color: #ebebeb; }
 
-.guess_table tr:hover { background-color: #e2e2e2; }
+.session_table tr:hover { background-color: #e2e2e2; }
 
-.guess_table th {
+.session_table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
